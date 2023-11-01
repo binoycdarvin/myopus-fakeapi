@@ -1,0 +1,18 @@
+{
+  "message": "Zones get success",
+  "status": true,
+  "data": [
+    {
+      "zoneId": 1,
+      "name": "kitchen"
+    },
+    {
+      "zoneId": 2,
+      "name": "Bedroom"
+    },
+    {
+      "zoneId": 3,
+      "name": "Meeting"
+    }
+  ]
+}
