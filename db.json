@@ -4,15 +4,15 @@
     "status": true,
     "data": [
       {
-        "zoneId": 1,
+        "id": 1,
         "name": "kitchen"
       },
       {
-        "zoneId": 2,
+        "id": 2,
         "name": "Bedroom"
       },
       {
-        "zoneId": 3,
+        "id": 3,
         "name": "Meeting"
       }
     ]
