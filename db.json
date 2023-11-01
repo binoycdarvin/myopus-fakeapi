@@ -1,18 +1,41 @@
 {
-  "message": "Zones get success",
-  "status": true,
-  "data": [
-    {
-      "zoneId": 1,
-      "name": "kitchen"
-    },
-    {
-      "zoneId": 2,
-      "name": "Bedroom"
-    },
-    {
-      "zoneId": 3,
-      "name": "Meeting"
-    }
-  ]
+  "zones": {
+    "message": "Zones get success",
+    "status": true,
+    "data": [
+      {
+        "zoneId": 1,
+        "name": "kitchen"
+      },
+      {
+        "zoneId": 2,
+        "name": "Bedroom"
+      },
+      {
+        "zoneId": 3,
+        "name": "Meeting"
+      }
+    ]
+  },
+  "events": {
+    "message": "Events get success",
+    "status": true,
+    "data": [
+        {
+          "id": "1",
+          "title": "Fun activity",
+          "start": "2023-11-01"
+        },
+        {
+          "id": "2",
+          "title": "Meeting",
+          "start": "2023-11-02 8:00:00"
+        },
+        {
+          "id": "3",
+          "title": "Party",
+          "start": "2023-11-03 8:00:00"
+        }
+    ]
+  }
 }
