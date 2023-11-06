@@ -27,7 +27,7 @@
         {
           "id": "1",
           "start": "2023-11-01T12:00:00",
-          "active": true,
+          "active": false,
 	        "temperatureSetpoint": 21.0,
 	        "label": "Fun Activity",
 	        "comment": "Lorem ipsum",
@@ -69,7 +69,7 @@
         {
           "id": "1",
           "start": "2023-11-01T12:00:00",
-          "active": true,
+          "active": false,
 	        "temperatureSetpoint": 21.0,
 	        "label": "Fun Activity",
 	        "comment": "Lorem ipsum",
