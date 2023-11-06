@@ -18,6 +18,50 @@
       }
     ]
   },
+  "events/all": {
+      "id": 1,
+      "message": "Events get success",
+      "messageCode": 1,
+      "status": true,
+      "data": [
+        {
+          "id": 1,
+          "title": "Fun activity",
+          "start": "2023-11-01T12:00:00",
+          "active": true,
+	        "temperatureSetpoint": 21.0,
+	        "label": "Fun Activity",
+	        "comment": "Lorem ipsum",
+	        "duration": 2,
+	        "movTriggerMin": 1,
+	        "movTriggerDur": 2
+        },
+        {
+          "id": "2",
+          "title": "Meeting",
+          "start": "2023-11-02T14:00:00",
+          "active": true,
+	        "temperatureSetpoint": 21.0,
+	        "label": "Fun Activity",
+	        "comment": "Lorem ipsum",
+	        "duration": 2,
+	        "movTriggerMin": 1,
+	        "movTriggerDur": 2
+        },
+        {
+          "id": "3",
+          "title": "Party",
+          "start": "2023-11-03T15:00:00",
+          "active": true,
+	        "temperatureSetpoint": 21.0,
+	        "label": "Fun Activity",
+	        "comment": "Lorem ipsum",
+	        "duration": 2,
+	        "movTriggerMin": 1,
+	        "movTriggerDur": 2
+        }
+      ]
+  },
   "events": [
     {
       "id": 1,
