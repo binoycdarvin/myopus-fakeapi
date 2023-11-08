@@ -19,48 +19,749 @@
     ]
   },
   "all-events": {
-      "id": 1,
-      "message": "Events get success",
-      "messageCode": 1,
-      "status": true,
-      "data": [
-        {
-          "id": "1",
-          "start": "2023-11-06T12:00:00",
-          "active": false,
-	        "temperatureSetPoint": 21.0,
-          "localControl": false,
-	        "label": "Fun Activity",
-	        "comment": "Lorem ipsum",
-	        "duration": 2,
-	        "movTriggerMin": 1,
-	        "movTriggerDur": 2
+    "header" : {
+      "httpStatus" : 200,
+      "content" : "devices",
+      "gateway" : "OPUS-IQ-DOT v1.20.007",
+      "timestamp" : "2023-11-06T13:45:40.334+0100"
+    },
+    "devices" : [
+      {
+        "deviceId" : "FFC1F881",
+        "friendlyId" : "HZ-Wohnzimmer-2",
+        "location" : "Bad ",
+        "deviceType" : "Heatarea",
+        "eeps" : [
+          {
+            "eep" : "D1-4B-05",
+            "version" : 0.9,
+            "direction" : "both"
+          }
+        ],
+        "learnInProcedure" : "internetOfThings",
+        "iotLabel" : "30S0000FFFFFFFF+1P004B00000023",
+        "productId" : "004B00000023",
+        "remanState" : "NotSeen",
+        "manufacturer" : "Digital Concepts GmbH",
+        "firstSeen" : "2023-10-03T11:36:54.601+0200",
+        "secured" : false,
+        "softSmartAck" : false,
+        "transmitModes" : [
+          {
+            "key" : "summerMode",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : true
+          },
+          {
+            "key" : "temperatureSetpoint",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : true
+          },
+          {
+            "key" : "temperatureOrigin",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : true
+          },
+          {
+            "key" : "actuatorDeactivated",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : true
+          },
+          {
+            "key" : "actuatorLowBattery",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : true
+          },
+          {
+            "key" : "actuatorNotResponding",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : true
+          },
+          {
+            "key" : "feedTemperature",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : true
+          },
+          {
+            "key" : "temperature",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : true
+          },
+          {
+            "key" : "humidity",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : true
+          },
+          {
+            "key" : "windowOpen",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : true
+          },
+          {
+            "key" : "missingTemperature",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : true
+          },
+          {
+            "key" : "heaterMode",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : true
+          }
+        ],
+        "configuration" : {
+          "lastUpdateTime" : "2023-11-06T11:43:42.556+0100",
+          "deviceId" : "FFC1F881",
+          "friendlyId" : "HZ-Wohnzimmer-2",
+          "parameters" : [
+            {
+              "key" : "localControl",
+              "description" : "Allow local usage to increase/decrease temperature setpoint",
+              "value" : "on",
+              "meaning" : "local control enabled"
+            },
+            {
+              "key" : "windowControl",
+              "description" : "Heatarea will close all actuators if open window was reported",
+              "value" : "on",
+              "meaning" : "All Actuators will be closed"
+            },
+            {
+              "key" : "summerControl",
+              "description" : "Enable/Disable the summer Mode or enable automatic mode using calendar weeks",
+              "value" : "auto",
+              "meaning" : "summerMode using calendar weeks"
+            },
+            {
+              "key" : "summerStart",
+              "description" : "calendar week where summer mode should begin. Only relevant if summerControl is used with CW",
+              "value" : 23.00,
+              "unit" : "CW"
+            },
+            {
+              "key" : "summerEnd",
+              "description" : "calendar week where summer mode should end. Only relevant if summerControl is used with CW",
+              "value" : 36.00,
+              "unit" : "CW"
+            },
+            {
+              "key" : "actuatorTimeout",
+              "description" : "Time in minutes after which a actuator will be considered outdated and a warning be thrown",
+              "value" : 500.00,
+              "unit" : "min"
+            },
+            {
+              "key" : "sensorTimeout",
+              "description" : "Time in minutes after which a sensor will be considered outdated and a warning be thrown",
+              "value" : 30.00,
+              "unit" : "min"
+            },
+            {
+              "key" : "temperatureOriginFallback",
+              "description" : "Time in minutes after the heatarea reverts to internal temperature, if no temperature data was received",
+              "value" : 720.00,
+              "unit" : "min"
+            }
+          ]
         },
-        {
-          "id": "2",
-          "start": "2023-11-07T14:00:00",
-          "active": true,
-	        "temperatureSetPoint": 21.0,
-          "localControl": false,
-	        "label": "Fun Activity",
-	        "comment": "Lorem ipsum",
-	        "duration": 2,
-	        "movTriggerMin": 1,
-	        "movTriggerDur": 2
+        "linkTables" : {
+          "inbound" : [
+            {
+              "deviceId" : "05A1A3FC"
+            }
+          ]
         },
-        {
-          "id": "3",
-          "start": "2023-11-08T15:00:00",
-          "active": true,
-	        "temperatureSetPoint": 21.0,
-          "localControl": false,
-	        "label": "Fun Activity",
-	        "comment": "Lorem ipsum",
-	        "duration": 2,
-	        "movTriggerMin": 1,
-	        "movTriggerDur": 2
-        }
-      ]
+        "calendars" : {
+          "turnusCalendar" : {
+            "active" : true,
+            "ecoBehavior" : {
+              "temperatureSetpoint" : 18.0,
+              "localControl" : true,
+              "returnCalControl" : {
+                "type" : "delay",
+                "value" : "0"
+              }
+            },
+            "defaultValues" : {
+              "active" : true,
+              "uuid" : "",
+              "temperatureSetpoint" : 21.0,
+              "label" : "Default",
+              "comment" : "",
+              "dow" : "0",
+              "start" : "00:00",
+              "duration" : 0,
+              "localControl" : false,
+              "returnCalControl" : {
+                "type" : "delay",
+                "value" : "0"
+              },
+              "movement" : [
+                "FFFFFFFF"
+              ],
+              "movTriggerMin" : 0,
+              "movTriggerDur" : 0
+            },
+            "entries" : [
+              {
+                "active" : true,
+                "uuid" : "",
+                "temperatureSetpoint" : 21.5,
+                "label" : "InitialEntry",
+                "comment" : "",
+                "dow" : "1",
+                "start" : "18:00",
+                "duration" : 7200,
+                "localControl" : false,
+                "returnCalControl" : {
+                  "type" : "delay",
+                  "value" : "0"
+                },
+                "movement" : [ ],
+                "movTriggerMin" : 0,
+                "movTriggerDur" : 0
+              }
+            ]
+          },
+          "eventCalendar" : {
+            "ecoBehavior" : {
+              "temperatureSetpoint" : 18.0,
+              "localControl" : false
+            },
+            "defaultValues" : {
+              "active" : true,
+              "uuid" : "",
+              "temperatureSetpoint" : 21.0,
+              "label" : "Default",
+              "comment" : "",
+              "start" : "00:00",
+              "startDate" : "01.01.1970",
+              "duration" : 0,
+              "localControl" : false,
+              "returnCalControl" : {
+                "type" : "delay",
+                "value" : "0"
+              },
+              "movement" : [
+                "FFFFFFFF"
+              ],
+              "movTriggerMin" : 0,
+              "movTriggerDur" : 0
+            },
+            "entries" : [
+              {
+                "active" : true,
+                "uuid" : "",
+                "temperatureSetpoint" : 21.5,
+                "label" : "InitialEntry",
+                "comment" : "",
+                "start" : "18:00",
+                "startDate" : "01.11.2023",
+                "duration" : 7200,
+                "localControl" : false,
+                "returnCalControl" : {
+                  "type" : "delay",
+                  "value" : "0"
+                },
+                "movement" : [ ],
+                "movTriggerMin" : 0,
+                "movTriggerDur" : 0
+              }
+            ]
+          }
+        },
+        "states" : [
+          {
+            "key" : "feedTemperature",
+            "value" : "notAvailable",
+            "meaning" : "feed temperature value was not yet transmitted",
+            "timestamp" : "2023-11-06T11:43:42.260+0100",
+            "age" : 7318075
+          },
+          {
+            "key" : "heaterMode",
+            "value" : "configIncomplete",
+            "meaning" : "Heatarea was successfully created but does not yet have any functional actuators assigned to it",
+            "timestamp" : "2023-11-06T11:43:42.260+0100",
+            "age" : 7318075
+          },
+          {
+            "key" : "humidity",
+            "value" : 60.00,
+            "unit" : "%",
+            "timestamp" : "2023-11-06T11:43:42.260+0100",
+            "age" : 7318075
+          },
+          {
+            "key" : "missingTemperature",
+            "value" : "info",
+            "meaning" : "One or more sensors did not send within the configured timeout (sensorTimeout)",
+            "timestamp" : "2023-11-06T13:44:41.915+0100",
+            "age" : 58420
+          },
+          {
+            "key" : "summerMode",
+            "value" : "false",
+            "meaning" : "Summer mode currently not active",
+            "timestamp" : "2023-11-06T11:43:42.260+0100",
+            "age" : 7318075
+          },
+          {
+            "key" : "temperature",
+            "value" : 19.60,
+            "unit" : "°C",
+            "timestamp" : "2023-11-06T11:43:42.260+0100",
+            "age" : 7318075
+          },
+          {
+            "key" : "temperatureOrigin",
+            "value" : "internal",
+            "meaning" : "Temperature values provided by actuators",
+            "timestamp" : "2023-11-06T11:43:42.260+0100",
+            "age" : 7318075
+          },
+          {
+            "key" : "temperatureSetpoint",
+            "value" : 19.00,
+            "unit" : "°C",
+            "timestamp" : "2023-11-06T11:43:42.260+0100",
+            "age" : 7318075
+          },
+          {
+            "key" : "windowOpen",
+            "value" : "false",
+            "meaning" : "No open window was detected",
+            "timestamp" : "2023-11-06T11:43:42.260+0100",
+            "age" : 7318075
+          }
+        ],
+        "supported" : true,
+        "operable" : true
+      },
+      {
+        "deviceId" : "05A1A3FC",
+        "friendlyId" : "sr06",
+        "location" : "Bad ",
+        "eeps" : [
+          {
+            "eep" : "D2-11-01",
+            "version" : 0.9,
+            "direction" : "both"
+          }
+        ],
+        "learnInProcedure" : "internetOfThings",
+        "iotLabel" : "30S000005A1A3FC+1P00401000004A",
+        "productId" : "00401000004A",
+        "remanState" : "SuccessfullLearnedIn",
+        "manufacturer" : "Jaeger Direkt",
+        "firstSeen" : "2023-10-19T14:25:53.066+0200",
+        "lastSeen" : "2023-11-06T13:14:25.082+0100",
+        "dbm" : -80,
+        "secured" : false,
+        "softSmartAck" : false,
+        "readOnly" : true,
+        "transmitModes" : [
+          {
+            "key" : "baseSetpoint",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "setpointType",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "temperature",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "telegramType",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "humidity",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "setpointOffset",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "fanSpeed",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "validTempCorrection",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "occupancyState",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          }
+        ],
+        "configuration" : {
+          "deviceId" : "05A1A3FC",
+          "friendlyId" : "sr06"
+        },
+        "linkTables" : { },
+        "targetState" : [
+          {
+            "key" : "baseSetpoint",
+            "value" : 21
+          },
+          {
+            "key" : "heatingSymbol",
+            "value" : "off"
+          },
+          {
+            "key" : "coolingSymbol",
+            "value" : "off"
+          },
+          {
+            "key" : "occupancyState",
+            "value" : "unoccupied"
+          },
+          {
+            "key" : "setpointType",
+            "value" : "absolute"
+          },
+          {
+            "key" : "temperatureCorrection",
+            "value" : 102
+          },
+          {
+            "key" : "validTempCorrection",
+            "value" : 5
+          },
+          {
+            "key" : "windowOpen",
+            "value" : "off"
+          },
+          {
+            "key" : "fanSpeed",
+            "value" : "auto"
+          }
+        ],
+        "states" : [
+          {
+            "key" : "baseSetpoint",
+            "value" : 21.00,
+            "timestamp" : "2023-11-06T13:14:25.082+0100",
+            "age" : 1875253
+          },
+          {
+            "key" : "fanSpeed",
+            "value" : "auto",
+            "timestamp" : "2023-11-06T13:14:25.082+0100",
+            "age" : 1875253
+          },
+          {
+            "key" : "humidity",
+            "value" : 60.40,
+            "timestamp" : "2023-11-06T13:14:25.082+0100",
+            "age" : 1875259
+          },
+          {
+            "key" : "occupancyState",
+            "value" : "unoccupied",
+            "timestamp" : "2023-11-06T13:14:25.082+0100",
+            "age" : 1875259
+          },
+          {
+            "key" : "setpointOffset",
+            "value" : 76.00,
+            "timestamp" : "2023-11-06T13:14:25.082+0100",
+            "age" : 1875259
+          },
+          {
+            "key" : "setpointType",
+            "value" : "absolute",
+            "timestamp" : "2023-11-06T13:14:25.082+0100",
+            "age" : 1875259
+          },
+          {
+            "key" : "telegramType",
+            "value" : "heartbeat",
+            "timestamp" : "2023-11-06T13:14:25.082+0100",
+            "age" : 1875259
+          },
+          {
+            "key" : "temperature",
+            "value" : 19.61,
+            "timestamp" : "2023-11-06T13:14:25.082+0100",
+            "age" : 1875260
+          },
+          {
+            "key" : "validTempCorrection",
+            "value" : 5,
+            "meaning" : "-5…5",
+            "timestamp" : "2023-11-06T13:14:25.082+0100",
+            "age" : 1875260
+          }
+        ],
+        "supported" : true,
+        "operable" : true
+      },
+      {
+        "deviceId" : "059CE29F",
+        "friendlyId" : "Temperatur",
+        "location" : "Küche ",
+        "batteryLevel" : "100%",
+        "eeps" : [
+          {
+            "eep" : "A5-04-03",
+            "version" : 0.9,
+            "direction" : "from"
+          }
+        ],
+        "learnInProcedure" : "internetOfThings",
+        "iotLabel" : "30S0000059CE29F+1P00401000003D+10Z00",
+        "productId" : "00401000003D",
+        "remanState" : "SuccessfullLearnedIn",
+        "manufacturer" : "Jaeger Direkt",
+        "firstSeen" : "2023-10-03T09:44:35.806+0200",
+        "lastSeen" : "2023-11-06T13:06:31.737+0100",
+        "dbm" : -86,
+        "secured" : false,
+        "softSmartAck" : false,
+        "transmitModes" : [
+          {
+            "key" : "temperature",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "humidity",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "trigger",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          }
+        ],
+        "configuration" : {
+          "deviceId" : "059CE29F",
+          "friendlyId" : "Temperatur"
+        },
+        "linkTables" : { },
+        "states" : [
+          {
+            "key" : "humidity",
+            "value" : 70.59,
+            "unit" : "%",
+            "timestamp" : "2023-11-06T13:06:31.737+0100",
+            "age" : 2348605
+          },
+          {
+            "key" : "temperature",
+            "value" : 13.31,
+            "unit" : "°C",
+            "timestamp" : "2023-11-06T13:06:31.737+0100",
+            "age" : 2348605
+          },
+          {
+            "key" : "trigger",
+            "value" : "event",
+            "meaning" : "Event triggered",
+            "timestamp" : "2023-11-06T13:06:31.737+0100",
+            "age" : 2348605
+          }
+        ],
+        "supported" : true,
+        "operable" : true
+      },
+      {
+        "deviceId" : "059CE29D",
+        "friendlyId" : "SMS-Plus",
+        "eeps" : [
+          {
+            "eep" : "A5-07-03",
+            "version" : 0.9,
+            "direction" : "from"
+          }
+        ],
+        "learnInProcedure" : "internetOfThings",
+        "iotLabel" : "30S0000059CE29D+1P00400000002E+10Z00",
+        "productId" : "00400000002E",
+        "remanState" : "NotSeen",
+        "manufacturer" : "Jaeger Direkt",
+        "firstSeen" : "2023-10-04T15:41:21.627+0200",
+        "secured" : false,
+        "softSmartAck" : false,
+        "transmitModes" : [
+          {
+            "key" : "motionDetected",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "errorCode",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "illumination",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "supplyVoltage",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          }
+        ],
+        "configuration" : {
+          "deviceId" : "059CE29D",
+          "friendlyId" : "SMS-Plus"
+        },
+        "linkTables" : { },
+        "states" : [ ],
+        "supported" : true,
+        "operable" : false
+      },
+      {
+        "deviceId" : "059CE29B",
+        "friendlyId" : "SMS-Plus-TF",
+        "eeps" : [
+          {
+            "eep" : "D2-14-00",
+            "version" : 0.9,
+            "direction" : "from"
+          },
+          {
+            "eep" : "A5-07-03",
+            "version" : 0.9,
+            "direction" : "from"
+          }
+        ],
+        "learnInProcedure" : "internetOfThings",
+        "iotLabel" : "30S0000059CE29B+1P00400000002D+10Z00",
+        "productId" : "00400000002D",
+        "remanState" : "NotSeen",
+        "manufacturer" : "Jaeger Direkt",
+        "firstSeen" : "2023-10-04T15:27:10.625+0200",
+        "secured" : false,
+        "softSmartAck" : false,
+        "transmitModes" : [
+          {
+            "key" : "illumination",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "temperature",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "motionDetected",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "humidity",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "errorCode",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          },
+          {
+            "key" : "supplyVoltage",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          }
+        ],
+        "configuration" : {
+          "deviceId" : "059CE29B",
+          "friendlyId" : "SMS-Plus-TF"
+        },
+        "linkTables" : { },
+        "states" : [ ],
+        "supported" : true,
+        "operable" : false
+      },
+      {
+        "deviceId" : "059A401E",
+        "friendlyId" : "Fensterkontakt",
+        "eeps" : [
+          {
+            "eep" : "D5-00-01",
+            "version" : 0.9,
+            "direction" : "from"
+          }
+        ],
+        "learnInProcedure" : "internetOfThings",
+        "iotLabel" : "30S0000059A401E+1P00401000003C+10Z00",
+        "productId" : "00401000003C",
+        "remanState" : "NotSeen",
+        "manufacturer" : "Jaeger Direkt",
+        "firstSeen" : "2023-10-03T09:41:53.259+0200",
+        "secured" : false,
+        "softSmartAck" : false,
+        "transmitModes" : [
+          {
+            "key" : "contact",
+            "transmitOnConnect" : true,
+            "transmitOnEvent" : true,
+            "transmitOnDuplicate" : false
+          }
+        ],
+        "configuration" : {
+          "deviceId" : "059A401E",
+          "friendlyId" : "Fensterkontakt"
+        },
+        "linkTables" : { },
+        "states" : [ ],
+        "supported" : true,
+        "operable" : false
+      }
+    ]
   },
   "events": [
     {
